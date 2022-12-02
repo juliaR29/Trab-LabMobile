@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proj/components/orgs_drawer.dart';
-import 'package:proj/components/orgs_stores_card.dart';
+import 'package:proj/components/cardPets.dart';
 import 'package:proj/models/producer_model.dart';
 import 'package:proj/repository/data.dart';
 import 'package:proj/screens/producer_details_screen.dart';
@@ -73,13 +73,13 @@ class ListagemPets extends StatelessWidget {
 
       final prod = Producer.fromJson(producers[producer]);
 
-      children.add(OrgsStoresCard(
+      children.add(CardPets(
         action: () => Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => ProducerDetailsScreen(producer: prod)),
         ),
         img: prod.logo,
-        distance: prod.distance,
+
         title: prod.name,
       ));
 

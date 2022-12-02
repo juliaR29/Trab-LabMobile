@@ -4,7 +4,16 @@
 			"logo": "assets/images/dog_ac3.png",
 			"name": "Rebeca",
 			"description": "Rebeca foi resgatada no rio arrudas com bastante carrapato e pulga.",
-			"distance": "10",
+			"packages": [
+				{"title": "Visita ao veterinário", "description": "Consulta inicial para avaliar estado de saúde do animal.", "price": "120,00", "items":  ["Consulta"]},
+				{"title": "Banho e tosa", "description": "Banho e tosa para a Rebeca ficar cheirosa.", "price": "35,00", "items":  ["Banho", "Tosa"]}
+				]
+		},
+		"Rebeca3": {
+			"logo": "assets/images/dog_ac3.png",
+			"name": "Pedro",
+			"vacina": "Sim",
+			"description": "Rebeca foi resgatada no rio arrudas com bastante carrapato e pulga.",
 			"packages": [
 				{"title": "Visita ao veterinário", "description": "Consulta inicial para avaliar estado de saúde do animal.", "price": "120,00", "items":  ["Consulta"]},
 				{"title": "Banho e tosa", "description": "Banho e tosa para a Rebeca ficar cheirosa.", "price": "35,00", "items":  ["Banho", "Tosa"]}

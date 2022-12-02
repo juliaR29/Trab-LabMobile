@@ -4,7 +4,6 @@ import 'package:proj/components/orgs_menu_card.dart';
 import 'package:proj/screens/favoritos.dart';
 import 'package:proj/screens/listagemPets.dart';
 import 'package:proj/screens/home.dart';
-import 'package:proj/screens/profile_screen.dart';
 import 'animals_cad_screen.dart';
 import 'login.dart';
 
@@ -63,15 +62,6 @@ class Menu extends StatelessWidget {
                 action: () => Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Favoritos()),
-                ),
-              ),
-              Divider(),
-              OrgsMenuCard(
-                text: 'Perfil',
-                icon: Icons.person,
-                action: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ProfileScreen()),
                 ),
               ),
               Divider(),

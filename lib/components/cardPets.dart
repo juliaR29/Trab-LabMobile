@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
-class OrgsStoresCard extends StatelessWidget {
+class CardPets extends StatelessWidget {
   final String img;
   final String title;
-  final String distance;
+  final String vacina;
+  // final String distance;
   final void Function() action;
 
-  OrgsStoresCard({
+  CardPets({
     @required this.img,
     @required this.title,
-    this.distance,
+    @required this.vacina,
+    // this.distance,
     @required this.action
   }): assert(img != null),
       assert(title != null),
@@ -58,7 +60,7 @@ class OrgsStoresCard extends StatelessWidget {
                     SizedBox(height: 5,)
                   ],
                 ),
-                _favoriteOrDistance(distance),
+                favorite(),
               ],
             ),
           ),
@@ -67,23 +69,7 @@ class OrgsStoresCard extends StatelessWidget {
     );
   }
 
-  _favoriteOrDistance(distance) {
-    if(distance != null)
-      return Expanded(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Text(
-              'Distância',
-              style: TextStyle(
-                  color: Colors.grey
-              )
-            ),
-            Text('$distance km')
-          ],
-        ),
-      );
-
+  favorite() {
     return Expanded(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
@@ -91,7 +77,7 @@ class OrgsStoresCard extends StatelessWidget {
         children: [
           Icon(
             Icons.favorite,
-            color: Colors.green,
+            color: Colors.black,
             size: 30,
           ),
         ],

@@ -4,7 +4,7 @@ import 'package:proj/components/orgs_highlights_card.dart';
 import 'package:proj/components/orgs_cards_list.dart';
 import 'package:proj/components/SearchBarMenu.dart';
 import 'package:proj/components/orgs_spotlight_card.dart';
-import 'package:proj/components/orgs_stores_card.dart';
+import 'package:proj/components/cardPets.dart';
 import 'package:proj/components/orgs_drawer.dart';
 import 'package:proj/models/producer_model.dart';
 import 'package:proj/repository/data.dart';
@@ -114,14 +114,13 @@ class _HomeState extends State<Home> {
     for (final producer in producers.keys) {
       final prod = Producer.fromJson(producers[producer]);
 
-      children.add(OrgsStoresCard(
+      children.add(CardPets(
         action: () => Navigator.push(
           context,
           MaterialPageRoute(
               builder: (context) => ProducerDetailsScreen(producer: prod)),
         ),
         img: prod.logo,
-        distance: prod.distance,
         title: prod.name,
       ));
 
