@@ -1,14 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:proj/components/orgs_highlights_card.dart';
-import 'package:proj/components/cardHome.dart';
-import 'package:proj/components/SearchBarMenu.dart';
-import 'package:proj/components/orgs_spotlight_card.dart';
 import 'package:proj/components/cardPets.dart';
 import 'package:proj/components/menuDrawer.dart';
 import 'package:proj/models/producer_model.dart';
 import 'package:proj/repository/data.dart';
-import 'package:proj/screens/producer_details_screen.dart';
+import 'package:proj/screens/petsDetails.dart';
 
 class Home extends StatefulWidget {
   final User user;
@@ -92,7 +88,7 @@ class _HomeState extends State<Home> {
       children.add(CardPets(
         action: () => Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ProducerDetailsScreen(producer: prod)),
+          MaterialPageRoute(builder: (context) => PetsDetailsScreen(producer: prod)),
         ),
         img: prod.logo,
 

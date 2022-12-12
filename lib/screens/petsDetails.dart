@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:proj/core/app_images.dart';
 import 'package:proj/models/package_model.dart';
 import 'package:proj/models/producer_model.dart';
 
-class ProducerDetailsScreen extends StatelessWidget {
-
+class PetsDetailsScreen extends StatelessWidget {
   final Producer producer;
-  ProducerDetailsScreen({
-    @required this.producer
-  });
+  PetsDetailsScreen({@required this.producer});
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +13,10 @@ class ProducerDetailsScreen extends StatelessWidget {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color.fromARGB(255, 16, 95, 160),
         title: Text(
-          'Informações do animal',
-          style: TextStyle(
-            fontWeight: FontWeight.w700
-          ),
+          'Informações do pet',
+          style: TextStyle(fontWeight: FontWeight.w700),
         ),
       ),
       body: Column(
@@ -30,12 +24,6 @@ class ProducerDetailsScreen extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Image.asset(
-                AppImages.bg_producer,
-                fit: BoxFit.fitWidth,
-                width: double.infinity,
-                height: 180,
-              ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 150, 20, 15),
                 child: Row(
@@ -44,56 +32,57 @@ class ProducerDetailsScreen extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                       child: Image.asset(producer.logo),
                     ),
-                    SizedBox(width: 10,),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Expanded(
                         child: Text(
-                          producer.name,
-                          style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        )
-                    ),
-                    Text(
-                      '${producer.distance} km',
+                      producer.name,
                       style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w400,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
                       ),
-                    ),
+                    )),
                   ],
                 ),
               ),
             ],
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: Text(
-              producer.description,
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 18
-              )
-            ),
-          ),
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: Text(
+                producer.name,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                ),
+              )),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
             child: Text(
-              'Cestas',
+              'Idade: 30 dias',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
-                fontSize: 25,
+                fontSize: 15,
               ),
             ),
           ),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.fromLTRB(20, 5, 20, 0),
-              child: ListView(
-                children: _generatePackageList(context, producer.packages)
-              ),
-            )
+          // Padding(
+          //   padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+          //   child: Text(producer.vacina,
+          //       style: TextStyle(color: Colors.black, fontSize: 18)),
+          // ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+            child: Text(producer.description,
+                style: TextStyle(color: Colors.black, fontSize: 18)),
           ),
+          Expanded(
+              child: Padding(
+            padding: EdgeInsets.fromLTRB(20, 5, 20, 0),
+            child: ListView(
+                children: _generatePackageList(context, producer.packages)),
+          )),
         ],
       ),
     );
@@ -101,7 +90,7 @@ class ProducerDetailsScreen extends StatelessWidget {
 
   List _generatePackageList(BuildContext context, List packages) {
     List<Widget> children = [];
-    for(final package in packages) {
+    for (final package in packages) {
       final pack = Package.fromJson(package);
 
       // children.add(InkWell(

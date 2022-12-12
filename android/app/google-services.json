@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:9861213415:android:f7adbb6e5b2c6b8158c642",
         "android_client_info": {
-          "package_name": "com.example.artemis_mobile"
+          "package_name": "com.example.adotpet"
         }
       },
       "oauth_client": [
@@ -45,7 +45,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:9861213415:android:94912c4c8fdfe5dc58c642",
         "android_client_info": {
-          "package_name": "com.example.artemismobile"
+          "package_name": "com.example.adotpet"
         }
       },
       "oauth_client": [

@@ -1,4 +1,4 @@
-package com.example.artemis_mobile;
+package com.example.adotpet;
 
 import io.flutter.embedding.android.FlutterActivity;
 

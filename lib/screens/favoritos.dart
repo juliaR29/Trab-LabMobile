@@ -3,7 +3,7 @@ import 'package:proj/components/menuDrawer.dart';
 import 'package:proj/components/cardPets.dart';
 import 'package:proj/models/producer_model.dart';
 import 'package:proj/repository/data.dart';
-import 'package:proj/screens/producer_details_screen.dart';
+import 'package:proj/screens/petsDetails.dart';
 
 class Favoritos extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -75,10 +75,9 @@ class Favoritos extends StatelessWidget {
       children.add(CardPets(
         action: () => Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ProducerDetailsScreen(producer: prod)),
+          MaterialPageRoute(builder: (context) => PetsDetailsScreen(producer: prod)),
         ),
         img: prod.logo,
-        // distance: prod.distance,
         title: prod.name,
       ));
 

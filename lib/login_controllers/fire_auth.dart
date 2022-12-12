@@ -20,9 +20,9 @@ class FireAuth {
       user = auth.currentUser;
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
-        print('The password provided is too weak.');
+        print('Senha fraca');
       } else if (e.code == 'email-already-in-use') {
-        print('The account already exists for that email.');
+        print('Já existe uma conta com este email.');
       }
     } catch (e) {
       print(e);
@@ -46,9 +46,9 @@ class FireAuth {
       user = userCredential.user;
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
-        print('No user found for that email.');
+        print('Usuário inexistente ou email incorreto.');
       } else if (e.code == 'wrong-password') {
-        print('Wrong password provided.');
+        print('Senha incorreta');
       }
     }
     return user;

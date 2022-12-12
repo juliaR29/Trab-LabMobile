@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:proj/components/menuDrawer.dart';
 import 'package:proj/db/database_helper.dart';
 
-class AnimalsCadScreen extends StatelessWidget {
+class PetsForm extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   final dbHelper = DatabaseHelper.instance;
   TextEditingController animalNameController = new TextEditingController();
@@ -40,7 +40,7 @@ class AnimalsCadScreen extends StatelessWidget {
               Text(
                 'Nome:',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
                   fontWeight: FontWeight.w400,
                   color: Colors.black,
                 ),
@@ -48,14 +48,13 @@ class AnimalsCadScreen extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(30.0),
                 ),
                 height: 50,
                 margin: EdgeInsets.all(12),
                 child: Row(
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsets.only(left: 8),
+                      padding: EdgeInsets.only(left: 5),
                     ),
                     new Expanded(
                       child: TextField(
@@ -63,13 +62,53 @@ class AnimalsCadScreen extends StatelessWidget {
                         keyboardType: TextInputType.text,
                         decoration: InputDecoration(
                           border: InputBorder.none,
-                          hintStyle: TextStyle(color: Colors.grey),
+                          hintStyle: TextStyle(color: Colors.black),
                           contentPadding:
                               EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                           isDense: true,
                         ),
                         style: TextStyle(
-                          fontSize: 14.0,
+                          fontSize: 16.0,
+                          color: Colors.black,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(height: 10),
+              Text(
+                'Raça:',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
+                height: 50,
+                margin: EdgeInsets.all(12),
+                child: Row(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(left: 5),
+                    ),
+                    new Expanded(
+                      child: TextField(
+                        controller: animalNameController,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintStyle: TextStyle(color: Colors.black),
+                          contentPadding:
+                              EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+                          isDense: true,
+                        ),
+                        style: TextStyle(
+                          fontSize: 16.0,
                           color: Colors.black,
                         ),
                       ),
@@ -81,7 +120,7 @@ class AnimalsCadScreen extends StatelessWidget {
               Text(
                 'Descrição:',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
                   fontWeight: FontWeight.w400,
                   color: Colors.black,
                 ),
@@ -89,14 +128,13 @@ class AnimalsCadScreen extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(30.0),
                 ),
                 height: 50,
                 margin: EdgeInsets.all(12),
                 child: Row(
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsets.only(left: 8),
+                      padding: EdgeInsets.only(left: 5),
                     ),
                     new Expanded(
                       child: TextField(
@@ -104,12 +142,12 @@ class AnimalsCadScreen extends StatelessWidget {
                         keyboardType: TextInputType.multiline,
                         decoration: InputDecoration(
                           border: InputBorder.none,
-                          hintStyle: TextStyle(color: Colors.grey),
+                          hintStyle: TextStyle(color: Colors.black),
                           contentPadding:
                           EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                         ),
                         style: TextStyle(
-                          fontSize: 14.0,
+                          fontSize: 16.0,
                           color: Colors.black,
                         ),
                       ),
@@ -118,21 +156,18 @@ class AnimalsCadScreen extends StatelessWidget {
                 ),
               ),
               ElevatedButton(
-                child: Text('Inserir dados'),
+                style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green, foregroundColor: Colors.white),
+                child: Text('Salvar'),
                 onPressed: () {_inserir();},
               ),
               ElevatedButton(
-                child: Text('Consultar dados', style: TextStyle(fontSize: 20),),
-                onPressed: () {_consultar();},
+                style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red, foregroundColor: Colors.white),
+                child: Text('Cancelar'),
+                onPressed: () {_inserir();},
               ),
-              ElevatedButton(
-                child: Text('Atualizar dados', style: TextStyle(fontSize: 20),),
-                onPressed: () {_atualizar();},
-              ),
-              ElevatedButton(
-                child: Text('Deletar dados', style: TextStyle(fontSize: 20),),
-                onPressed: () {_deletar();},
-              ),
+              
             ],
           ),
         ),
@@ -165,7 +200,6 @@ class AnimalsCadScreen extends StatelessWidget {
   }
 
   void _deletar() async {
-    // Assumindo que o numero de linhas é o id para a última linha
     final id = await dbHelper.queryRowCount();
     final linhaDeletada = await dbHelper.delete(id);
     print('Deletada(s) $linhaDeletada linha(s): linha $id');
