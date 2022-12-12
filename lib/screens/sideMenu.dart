@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:proj/components/orgs_menu_card.dart';
+import 'package:proj/components/menuCard.dart';
 import 'package:proj/screens/favoritos.dart';
 import 'package:proj/screens/listagemPets.dart';
 import 'package:proj/screens/home.dart';
@@ -29,7 +29,7 @@ class Menu extends StatelessWidget {
               ),
               SizedBox(height: 20),
               SizedBox(height: 30),
-              OrgsMenuCard(
+              MenuCard(
                 text: 'Início',
                 icon: Icons.home,
                 action: () => Navigator.push(
@@ -38,7 +38,7 @@ class Menu extends StatelessWidget {
                 ),
               ),              
               Divider(),
-              OrgsMenuCard(
+              MenuCard(
                 text: 'Cadastro de pets',
                 icon: Icons.pets,
                 action: () => Navigator.push(
@@ -47,7 +47,7 @@ class Menu extends StatelessWidget {
                 ),
               ),
               Divider(),
-              OrgsMenuCard(
+              MenuCard(
                 text: 'Listagem de pets',
                 icon: Icons.pets,
                 action: () => Navigator.push(
@@ -56,7 +56,7 @@ class Menu extends StatelessWidget {
                 ),
               ),
               Divider(),
-              OrgsMenuCard(
+              MenuCard(
                 text: 'Favoritos',
                 icon: Icons.favorite,
                 action: () => Navigator.push(
@@ -65,7 +65,7 @@ class Menu extends StatelessWidget {
                 ),
               ),
               Divider(),
-              OrgsMenuCard(
+              MenuCard(
                 text: 'Sair',
                 icon: Icons.logout,
                 action: () => { _signOut(), Navigator.of(context).pushAndRemoveUntil(

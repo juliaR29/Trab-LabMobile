@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class OrgsMenuCard extends StatelessWidget {
+class MenuCard extends StatelessWidget {
   final IconData icon;
   final String text;
   final void Function() action;
 
-  OrgsMenuCard({
+  MenuCard({
     @required this.icon,
     @required this.text,
     @required this.action,

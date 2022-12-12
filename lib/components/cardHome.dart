@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class OrgsCardsList extends StatelessWidget {
+class CardHome extends StatelessWidget {
   final List<Widget> cards;
   final double heightList;
 
-  OrgsCardsList({
+  CardHome({
     @required this.cards,
     @required this.heightList
   }): assert(cards != null),
