@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proj/components/orgs_drawer.dart';
+import 'package:proj/components/menuDrawer.dart';
 import 'package:proj/db/database_helper.dart';
 
 class AnimalsCadScreen extends StatelessWidget {
@@ -12,7 +12,7 @@ class AnimalsCadScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      drawer: OrgsDrawer(),
+      drawer: MenuDrawer(),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
