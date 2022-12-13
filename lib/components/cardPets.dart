@@ -3,13 +3,11 @@ import 'package:flutter/material.dart';
 class CardPets extends StatelessWidget {
   final String img;
   final String title;
-  final String vacina;
   final void Function() action;
 
   CardPets({
     @required this.img,
     @required this.title,
-    @required this.vacina,
     @required this.action
   }): assert(img != null),
       assert(title != null),

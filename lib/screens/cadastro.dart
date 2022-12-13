@@ -49,7 +49,6 @@ class _SignupScreenState extends State<SignupScreen> {
                       'assets/images/A-Logo.jpg',
                       fit: BoxFit.fitWidth,
                       width: double.maxFinite,
-                      // height: 180,
                     ),
                     Container(
                       padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),

@@ -3,15 +3,20 @@
 		"Rebeca": {
 			"logo": "assets/images/CachorroFilhote.jpg",
 			"name": "Rebeca",
-			"description": "Descrição: Rebeca foi abandonada na rua e por pouco não sobreviveu. É um animal muito dócil e está a procura de um lar." 
-			
+			"description": "Descrição: Rebeca foi abandonada na rua e por pouco não sobreviveu. É um animal muito dócil e está a procura de um lar."
 		},
 		"Pedro": {
 			"logo": "assets/images/CachorroFilhote2.jpg",
 			"name": "Pedro",
 			"description": "Descrição: Pedro foi encontrado em um depósito e ainda sofria maus tratos, ele necessita de carinho e amor. Nos ajude a adotá-lo."
-			
+		},
+		"Lola": {
+			"logo": "assets/images/Cachorro3.webp",
+			"name": "Lola",
+			"description": "Descrição: Lola veio para o abrigo pois os donos não conseguem sustentá-la. Nos ajude a adotá-la."
 		}
 	},
-	"favorites": ["Rebeca"]
+	"favorites": [
+		"Rebeca"
+	]
 }

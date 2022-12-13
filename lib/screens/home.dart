@@ -43,7 +43,6 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   IconButton(
-                    color: Colors.transparent,
                     icon: Icon(Icons.menu, color: Colors.black),
                     onPressed: () => _scaffoldKey.currentState.openDrawer(),
                   ),
