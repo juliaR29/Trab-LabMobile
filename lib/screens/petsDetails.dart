@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:proj/models/package_model.dart';
-import 'package:proj/models/producer_model.dart';
+import 'package:proj/models/dataModel.dart';
 
 class PetsDetailsScreen extends StatelessWidget {
-  final Producer producer;
+  final DataModel producer;
   PetsDetailsScreen({@required this.producer});
 
   @override
@@ -91,22 +90,7 @@ class PetsDetailsScreen extends StatelessWidget {
   List _generatePackageList(BuildContext context, List packages) {
     List<Widget> children = [];
     for (final package in packages) {
-      final pack = Package.fromJson(package);
-
-      // children.add(InkWell(
-      //   onTap: () => Navigator.push(
-      //     context,
-      //     MaterialPageRoute(builder: (context) => PackageDetailsScreen(
-      //       package: pack,
-      //       producer: producer,
-      //     )),
-      //   ),
-      //   child: OrgsPackagesCard(
-      //     title: pack.title,
-      //     price: pack.price,
-      //     description: pack.description,
-      //   ),
-      // ));
+      final pack = DataModel.fromJson(package);
     }
 
     return children;

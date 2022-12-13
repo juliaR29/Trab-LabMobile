@@ -1,16 +1,15 @@
 {
 	"producers": {
 		"Rebeca": {
-			"logo": "assets/images/dog_ac3.png",
+			"logo": "assets/images/CachorroFilhote.jpg",
 			"name": "Rebeca",
-			"description": "Rebeca foi resgatada no rio arrudas com bastante carrapato e pulga."
+			"description": "Descrição: Rebeca foi abandonada na rua e por pouco não sobreviveu. É um animal muito dócil e está a procura de um lar." 
 			
 		},
-		"Rebeca3": {
-			"logo": "assets/images/dog_ac3.png",
+		"Pedro": {
+			"logo": "assets/images/CachorroFilhote2.jpg",
 			"name": "Pedro",
-			"vacina": "Sim",
-			"description": "Rebeca foi resgatada no rio arrudas com bastante carrapato e pulga."
+			"description": "Descrição: Pedro foi encontrado em um depósito e ainda sofria maus tratos, ele necessita de carinho e amor. Nos ajude a adotá-lo."
 			
 		}
 	},

@@ -1,11 +1,13 @@
-class Producer {
+import 'package:proj/repository/data.dart';
+
+class DataModel {
   String name;
   String logo;
   String description;
   String distance;
   List packages;
 
-  Producer({
+  DataModel({
     this.name,
     this.description,
     this.logo,
@@ -13,9 +15,9 @@ class Producer {
     this.packages
   });
 
-  factory Producer.fromJson(Map<String, dynamic> parsedJson){
+  factory DataModel.fromJson(Map<String, dynamic> parsedJson){
 
-    return Producer(
+    return DataModel(
       name: parsedJson['name'],
       logo : parsedJson['logo'],
       description : parsedJson['description'],

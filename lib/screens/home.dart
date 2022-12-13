@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:proj/components/cardPets.dart';
 import 'package:proj/components/menuDrawer.dart';
-import 'package:proj/models/producer_model.dart';
+import 'package:proj/models/dataModel.dart';
 import 'package:proj/repository/data.dart';
 import 'package:proj/screens/petsDetails.dart';
 
@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
       drawer: MenuDrawer(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
+          padding: EdgeInsets.fromLTRB(10, 50, 20, 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -83,7 +83,7 @@ class _HomeState extends State<Home> {
 
     for(final producer in producers.keys) {
 
-      final prod = Producer.fromJson(producers[producer]);
+      final prod = DataModel.fromJson(producers[producer]);
 
       children.add(CardPets(
         action: () => Navigator.push(

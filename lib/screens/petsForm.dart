@@ -6,6 +6,7 @@ class PetsForm extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   final dbHelper = DatabaseHelper.instance;
   TextEditingController animalNameController = new TextEditingController();
+  TextEditingController animalRacaController = new TextEditingController();
   TextEditingController animalDescController = new TextEditingController();
 
   @override
@@ -98,7 +99,7 @@ class PetsForm extends StatelessWidget {
                     ),
                     new Expanded(
                       child: TextField(
-                        controller: animalNameController,
+                        controller: animalRacaController,
                         keyboardType: TextInputType.text,
                         decoration: InputDecoration(
                           border: InputBorder.none,

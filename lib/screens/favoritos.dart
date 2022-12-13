@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proj/components/menuDrawer.dart';
 import 'package:proj/components/cardPets.dart';
-import 'package:proj/models/producer_model.dart';
+import 'package:proj/models/dataModel.dart';
 import 'package:proj/repository/data.dart';
 import 'package:proj/screens/petsDetails.dart';
 
@@ -70,7 +70,7 @@ class Favoritos extends StatelessWidget {
 
     for(final producer in producers.keys) {
 
-      final prod = Producer.fromJson(producers[producer]);
+      final prod = DataModel.fromJson(producers[producer]);
 
       children.add(CardPets(
         action: () => Navigator.push(
