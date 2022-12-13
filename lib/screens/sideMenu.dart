@@ -2,9 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:proj/components/menuCard.dart';
 import 'package:proj/screens/favoritos.dart';
-import 'package:proj/screens/listagemPets.dart';
 import 'package:proj/screens/home.dart';
-import 'animals_cad_screen.dart';
+import 'petsForm.dart';
 import 'login.dart';
 
 class Menu extends StatelessWidget {
@@ -43,16 +42,7 @@ class Menu extends StatelessWidget {
                 icon: Icons.pets,
                 action: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AnimalsCadScreen()),
-                ),
-              ),
-              Divider(),
-              MenuCard(
-                text: 'Listagem de pets',
-                icon: Icons.pets,
-                action: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListagemPets()),
+                  MaterialPageRoute(builder: (context) => PetsForm()),
                 ),
               ),
               Divider(),

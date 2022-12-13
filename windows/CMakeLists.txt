@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(artemis_mobile LANGUAGES CXX)
+project(adotpet LANGUAGES CXX)
 
-set(BINARY_NAME "artemis_mobile")
+set(BINARY_NAME "adotpet")
 
 cmake_policy(SET CMP0063 NEW)
 

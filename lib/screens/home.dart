@@ -1,14 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:proj/components/orgs_highlights_card.dart';
-import 'package:proj/components/cardHome.dart';
-import 'package:proj/components/SearchBarMenu.dart';
-import 'package:proj/components/orgs_spotlight_card.dart';
 import 'package:proj/components/cardPets.dart';
 import 'package:proj/components/menuDrawer.dart';
-import 'package:proj/models/producer_model.dart';
+import 'package:proj/models/dataModel.dart';
 import 'package:proj/repository/data.dart';
-import 'package:proj/screens/producer_details_screen.dart';
+import 'package:proj/screens/petsDetails.dart';
 
 class Home extends StatefulWidget {
   final User user;
@@ -31,7 +27,7 @@ class _HomeState extends State<Home> {
       drawer: MenuDrawer(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
+          padding: EdgeInsets.fromLTRB(10, 50, 20, 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -47,7 +43,6 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   IconButton(
-                    color: Colors.transparent,
                     icon: Icon(Icons.menu, color: Colors.black),
                     onPressed: () => _scaffoldKey.currentState.openDrawer(),
                   ),
@@ -87,12 +82,12 @@ class _HomeState extends State<Home> {
 
     for(final producer in producers.keys) {
 
-      final prod = Producer.fromJson(producers[producer]);
+      final prod = DataModel.fromJson(producers[producer]);
 
       children.add(CardPets(
         action: () => Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ProducerDetailsScreen(producer: prod)),
+          MaterialPageRoute(builder: (context) => PetsDetailsScreen(producer: prod)),
         ),
         img: prod.logo,
 
