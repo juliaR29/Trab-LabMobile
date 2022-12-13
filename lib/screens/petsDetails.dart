@@ -57,42 +57,12 @@ class PetsDetailsScreen extends StatelessWidget {
                 ),
               )),
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-            child: Text(
-              'Idade: 30 dias',
-              style: TextStyle(
-                fontWeight: FontWeight.w700,
-                fontSize: 15,
-              ),
-            ),
-          ),
-          // Padding(
-          //   padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-          //   child: Text(producer.vacina,
-          //       style: TextStyle(color: Colors.black, fontSize: 18)),
-          // ),
-          Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: Text(producer.description,
                 style: TextStyle(color: Colors.black, fontSize: 18)),
           ),
-          Expanded(
-              child: Padding(
-            padding: EdgeInsets.fromLTRB(20, 5, 20, 0),
-            child: ListView(
-                children: _generatePackageList(context, producer.packages)),
-          )),
         ],
       ),
     );
-  }
-
-  List _generatePackageList(BuildContext context, List packages) {
-    List<Widget> children = [];
-    for (final package in packages) {
-      final pack = DataModel.fromJson(package);
-    }
-
-    return children;
   }
 }
