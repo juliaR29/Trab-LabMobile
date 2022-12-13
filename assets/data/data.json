@@ -1,25 +1,22 @@
 {
 	"producers": {
-		"Rebeca": {
+		"Nina": {
 			"logo": "assets/images/CachorroFilhote.png",
-			"name": "Rebeca",
-			"vacina": "Vacina: sim",
-			"description": "Idade: 15 dias \nDescrição: Rebeca foi abandonada na rua e por pouco não sobreviveu. É um animal muito dócil e está a procura de um lar."
+			"name": "Nina",
+			"description": "Vacina: sim \nIdade: 15 dias \nDescrição: Nina foi abandonada na rua e por pouco não sobreviveu. É um animal muito dócil e está a procura de um lar."
 		},
 		"Pedro": {
 			"logo": "assets/images/CachorroFilhote2.jpg",
 			"name": "Pedro",
-			"vacina": "Vacina: sim",
-			"description": "Idade: 30 dias \nDescrição: Pedro foi encontrado em um depósito e ainda sofria maus tratos, ele necessita de carinho e amor. Nos ajude a adotá-lo."
+			"description": "Vacina: sim \nIdade: 30 dias \nDescrição: Pedro foi encontrado em um depósito e ainda sofria maus tratos, ele necessita de carinho e amor. Nos ajude a adotá-lo."
 		},
 		"Lola": {
 			"logo": "assets/images/Cachorro3.png",
 			"name": "Lola",
-			"vacina": "Vacina: não",
-			"description": "Idade: 10 meses \nDescrição: Lola veio para o abrigo pois os donos não conseguem sustentá-la. Nos ajude a adotá-la."
+			"description": "Vacina: não \nIdade: 10 meses \nDescrição: Lola veio para o abrigo pois os donos não conseguem sustentá-la. Nos ajude a adotá-la."
 		}
 	},
 	"favorites": [
-		"Rebeca"
+		"Lola"
 	]
 }

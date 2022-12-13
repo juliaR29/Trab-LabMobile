@@ -22,22 +22,22 @@ class MenuCard extends StatelessWidget {
           children: [
             Container(
               decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(10),
+                color: Color.fromARGB(255, 16, 95, 160),
+                borderRadius: BorderRadius.circular(5),
               ),
-              width: 30,
-              height: 30,
+              width: 40,
+              height: 40,
               child: Icon(
                 icon,
-                color: Colors.grey,
-                size: 20,
+                color: Colors.white,
+                size: 30,
               ),
             ),
-            SizedBox(width: 20),
+            SizedBox(width: 25),
             Text(
              text,
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 16,
                 fontWeight: FontWeight.w400
               ),
             )

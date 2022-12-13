@@ -19,17 +19,16 @@ class Menu extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Menu',
+                'MENU',
                 style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.w700,
-                    color: Colors.black
+                    color: Color.fromARGB(255, 16, 95, 160)
                 ),
               ),
-              SizedBox(height: 20),
               SizedBox(height: 30),
               MenuCard(
-                text: 'Início',
+                text: 'INÍCIO',
                 icon: Icons.home,
                 action: () => Navigator.push(
                   context,
@@ -38,7 +37,7 @@ class Menu extends StatelessWidget {
               ),              
               Divider(),
               MenuCard(
-                text: 'Cadastro de pets',
+                text: 'CADASTRO DE PETS',
                 icon: Icons.pets,
                 action: () => Navigator.push(
                   context,
@@ -47,7 +46,7 @@ class Menu extends StatelessWidget {
               ),
               Divider(),
               MenuCard(
-                text: 'Favoritos',
+                text: 'FAVORITOS',
                 icon: Icons.favorite,
                 action: () => Navigator.push(
                   context,
@@ -56,7 +55,7 @@ class Menu extends StatelessWidget {
               ),
               Divider(),
               MenuCard(
-                text: 'Sair',
+                text: 'SAIR',
                 icon: Icons.logout,
                 action: () => { _signOut(), Navigator.of(context).pushAndRemoveUntil(
                   new MaterialPageRoute(builder: (context) => new LoginScreen()),

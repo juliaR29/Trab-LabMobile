@@ -27,7 +27,7 @@ class Favoritos extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.w700,
-                        color: Colors.black
+                        color: Color.fromARGB(255, 16, 95, 160)
                     ),
                   ),
                   IconButton(

@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
                     style: TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.w700,
-                        color: Colors.black
+                        color: Color.fromARGB(255, 16, 95, 160)
                     ),
                   ),
                   IconButton(
@@ -94,7 +94,7 @@ class _HomeState extends State<Home> {
         title: prod.name,
       ));
 
-      children.add(SizedBox(height: 10));
+      children.add(SizedBox(height: 5));
     }
 
     return children;
