@@ -71,7 +71,7 @@ class CardPets extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(
-            Icons.favorite,
+            Icons.favorite_border,
             color: Colors.black,
             size: 30,
           ),

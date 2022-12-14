@@ -90,7 +90,6 @@ class _HomeState extends State<Home> {
           MaterialPageRoute(builder: (context) => PetsDetailsScreen(producer: prod)),
         ),
         img: prod.logo,
-
         title: prod.name,
       ));
 
