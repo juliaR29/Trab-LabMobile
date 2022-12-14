@@ -13,4 +13,8 @@ class Data {
   static Future getJson() async {
     return json.decode(await rootBundle.loadString('assets/data/data.json')) as Map;
   }
+
+  static Future getJson2() async {
+    return json.decode(await rootBundle.loadString('data/data2.json')) as Map;
+  }
 }

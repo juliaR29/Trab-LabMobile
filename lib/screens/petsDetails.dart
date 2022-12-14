@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proj/models/dataModel.dart';
+import 'package:proj/db/database_helper.dart';
 
 class PetsDetailsScreen extends StatelessWidget {
   final DataModel producer;
@@ -53,8 +54,22 @@ class PetsDetailsScreen extends StatelessWidget {
             child: Text(producer.description,
                 style: TextStyle(color: Colors.black, fontSize: 18)),
           ),
+          SizedBox(height: 25),
+          ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    foregroundColor: Colors.white),
+                child: Text('Quero adotar!'),
+                onPressed: () {
+                  _inserir();
+                },
+              ),
         ],
       ),
     );
   }
 }
+
+ void _inserir() async {
+    print('adotado!');
+  }

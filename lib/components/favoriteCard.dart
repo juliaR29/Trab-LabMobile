@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class CardPets extends StatelessWidget {
+class FavoriteCard extends StatelessWidget {
   final String img;
   final String title;
   final void Function() action;
 
-  CardPets({
+  FavoriteCard({
     @required this.img,
     @required this.title,
     @required this.action
@@ -56,6 +56,7 @@ class CardPets extends StatelessWidget {
                     SizedBox(height: 5,)
                   ],
                 ),
+                favorite(),
               ],
             ),
           ),

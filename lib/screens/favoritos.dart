@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proj/components/menuDrawer.dart';
-import 'package:proj/components/cardPets.dart';
+import 'package:proj/components/favoriteCard.dart';
 import 'package:proj/models/dataModel.dart';
 import 'package:proj/repository/data.dart';
 import 'package:proj/screens/petsDetails.dart';
@@ -65,14 +65,14 @@ class Favoritos extends StatelessWidget {
 
   Future _generateProducerList(BuildContext context) async {
     List<Widget> children = [];
-    final data = await Data.getJson();
+    final data = await Data.getJson2();
     final producers = data["producers"];
 
     for(final producer in producers.keys) {
 
       final prod = DataModel.fromJson(producers[producer]);
 
-      children.add(CardPets(
+      children.add(FavoriteCard(
         action: () => Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => PetsDetailsScreen(producer: prod)),
